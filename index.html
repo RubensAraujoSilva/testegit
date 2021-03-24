@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Módulo GIT</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="text-center">Trabalhando com versionamento</h3>
+
+        <div class="row">
+            <h5 class="border-bottom p-2 title">#1 - Configuração da Máquina </h5>
+            <div class="bg-light p-3">
+                <p>Essa configuração é realizada globalmente para setar as informações na máquina tais como o Nome e E-mail do desenvolvedor. </p>
+                <h6> Definindo nome de usuário: <code> git config --global user.name "Rubens Araújo"</code></h6>
+                <h6> Definindo e-mail do usuário: <code>git config --global user.email "rubens@octosoft.com.br" </code></h6>
+                <h6> Definindo Editor do GIT: <code>git config --global core.editor "code --wait" </code> </h6>
+            </div>
+        </div> 
+
+        <div class="row">
+            <h5 class="border-bottom p-2 title">#2 - Comandos do GIT</h5>
+            <div class="bg-light p-3">
+                <h6><code> git --version</code> - Exibe a versão instalada em nossa máquina.</h6>
+                <h6><code> git config --list</code> - Exibe a lista de todas as configurações globais realizadas.</h6>
+                <h6><code> git config user.nome</code> - Exibe o nome do usuário git configurado em nosso PC.</h6>
+                <h6><code> git init</code> - Rode esse comando dentro da pasta do seu projeto para inicialziar um repositório local.</h6>
+                <h6><code> git status</code> - Exibe o status do nosso repositório.</h6>
+                <h6><code> git add -A</code> - Adiciona no mapemaneto apenas os arquivos que teve alteração.</h6>
+                <h6><code> git add *</code> - Adiciona no mapemaneto todos os arquivos que teve alteração.</h6>
+                <h6><code> git commit -m "Sua Mensagem"</code> - Cria uma versão de nosso código com a mensagem.</h6>
+                <h6><code> git log</code> - Exibe todos os commits realizados em nosso repositório</h6>
+                <h6><code> git branch</code> - Exibe em qual branch estamos trabalhando.</h6>
+                <h6><code> git reset --soft</code> - Reseta os arquivos na posição atual, já com os arquivos adicionados ao reposiório.</h6>
+                <h6><code> git reset --mixed</code> - Reseta os arquivos na posição atual sem o commit e sem estar com os arquivos adicionados.</h6>
+                <h6><code> git reset --hard</code> - Reseta e volta para o commit selecioniado, todos os arquivos do commit mais recente será apagdo.</h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <h5 class="border-bottom p-2 title">#3 - Criando Branchs</h5>
+            <div class="bg-light p-3">
+                <h6><code> git branch teste</code> - Com isso criamos uma branch nova chamada teste.</h6>
+                <h6><code> git checkout teste</code> - Altera nossa branch</h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <h5 class="border-bottom p-2 title">#4 - Exibindo alterações dos arquivos</h5>
+            <div class="bg-light p-3">
+                <h6><code> git diff</code> - Exibe as alterações que tiveram nos arquivos.</h6>
+                <h6><code> git diff --name-only</code> - Exibe apenas o nome dos arquivos que foram alterados.</h6>
+                <h6><code> git diff index.html</code> - Exibe as aterações que houve no arquivo.</h6>
+                <h6><code> git checkout HEAD -- README.md</code> - Apaga as alterações que foram realizadas.</h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <h5 class="border-bottom p-2 title">#5 - Enviando nosso repositório local para o GIT</h5>
+            <div class="bg-light p-3">
+                <h6><code> ssh-keygen -t ed25519 -C "your_email@example.com"</code> - Será gerada uma chave pública e privada na pasta de nosso usuário, copiei a chave pública e adicione nas configurações do seu perfil do git em 
+                    Settings -> SSH and GPG Keys.</h6>
+                <h6>Criei um repositório em sua conta do GIT.</h6>
+                <h6><code>git remote add origin https://github.com/RubensAraujoSilva/modulogit.git</code> - User o comando gerado no repositório</h6>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+        crossorigin="anonymous"></script>
+</body>
+</html>
